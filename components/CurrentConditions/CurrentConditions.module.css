@@ -1,0 +1,28 @@
+.currentConditionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 1.5rem
+}
+
+.conditionsTextContainer {
+  padding-left: 3rem;
+}
+
+.icon {
+  width: 15rem;
+  height: auto;
+  max-height: 15rem;
+}
+
+.shortForecastText {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
