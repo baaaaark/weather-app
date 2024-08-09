@@ -1,9 +1,9 @@
-.indexTypography {
+  .indexTypography {
     text-align: center;
     width: 100%;
   }
 
-.indexContainer {
+  .indexContainer {
     display: flex;
     flex-direction: column;
     text-align: center;
