@@ -9,11 +9,9 @@
     background-color: hsl(191, 56%, 91%);
     width: 100%;
     max-width: 90%;
-    font-size: 1.5rem;
   }
   
   .hourlyForecastTableContainer {
-    width: 95%;
     overflow-x: auto;
     margin: auto;
   }
@@ -22,11 +20,11 @@
     width: 100%;
     border-collapse: collapse;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .th, .td {
-    padding: 10px;
+    padding: 0.25rem;
     border: 1px solid #ffffff;
   }
   
@@ -36,5 +34,7 @@
   
   .hourlyForecastTypography {
     margin: auto;
+    font-size: 2rem;
+    font-weight: normal;
   }
   

@@ -1,3 +1,7 @@
+  .slider {
+    font-size: 1rem;
+  }
+  
   .weatherGraphContainer {
     display: flex;
     flex-direction: column;
@@ -7,13 +11,14 @@
   
   .weatherGraphContainer .weatherGraphLegendInstruction {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
 
   .weatherGraphTypography {
     margin: auto;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: normal;
   }

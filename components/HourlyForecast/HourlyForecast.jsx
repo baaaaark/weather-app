@@ -22,7 +22,7 @@ const HourlyForecast = ({ data }) => {
 			{Object.keys(groupedByDay).map((date) => (
 				<Accordion sx={{ backgroundColor:'hsl(191, 56%, 91%)'}} key={date} className={styles.hourlyForecastAccordion}>
 					<AccordionSummary expandIcon={<ExpandMoreIcon />}>
-						<Typography className={styles.hourlyForecastTypography} variant="h4">{format(date, 'EEEE, MMMM do')}</Typography>
+					<h3 className={`${styles.hourlyForecastTypography} hourlyForecastTypography`}>{format(date, 'EEEE, MMMM do')}</h3>
 					</AccordionSummary>
 					<AccordionDetails className={styles.hourlyForecastTableContainer}>
 						<table className={styles.hourlyForecastTable}>
@@ -30,11 +30,11 @@ const HourlyForecast = ({ data }) => {
 								<tr className={styles.tr}>
 									<th className={styles.th}>Time</th>
 									<th className={styles.th}>Forecast</th>
-									<th className={styles.th}>Temperature</th>
-									<th className={styles.th}>Precipitation</th>
+									<th className={styles.th}>Temp</th>
+									<th className={styles.th}>Precip</th>
 									<th className={styles.th}>Dewpoint</th>
-									<th className={styles.th}>Humidity</th>
-									<th className={styles.th}>Wind Speed</th>
+									<th className={styles.th}>Humid</th>
+									<th className={styles.th}>Wind</th>
 								</tr>
 							</thead>
 							<tbody>

@@ -25,6 +25,10 @@ const WeatherGraph = ({ data }) => {
 	const handleSliderChange = (event, newValue) => {
 		setDayRange(newValue);
 	};
+	
+	const remifyFont = (remSize) => {
+		return parseFloat(getComputedStyle(document.body).fontSize) * remSize;
+	}
 
 	const filteredLabels = labels.slice(0, dayRange * 24);
 	const filteredTemperatures = temperatures.slice(0, dayRange * 24);
@@ -87,12 +91,12 @@ const WeatherGraph = ({ data }) => {
 				title: {
 					type: 'time',
 					font: {
-						size: 24,
+						size: remifyFont(1.1),
 					},
 				},
 				ticks: {
 					font: {
-						size: 18,
+						size: remifyFont(0.9),
 					},
 					maxTicksLimit: Math.ceil(filteredLabels.length),
 				},
@@ -104,14 +108,14 @@ const WeatherGraph = ({ data }) => {
 				position: 'left',
 				title: {
 					display: true,
-					text: 'Temperature / Dew Point (°F)',
+					text: 'Temp / Dewpoint (°F)',
 					font: {
-						size: 24,
+						size: remifyFont(1),
 					},
 				},
 				ticks: {
 					font: {
-						size: 18,
+						size: remifyFont(0.9),
 					},
 				},
 			},
@@ -121,14 +125,14 @@ const WeatherGraph = ({ data }) => {
 				position: 'right',
 				title: {
 					display: true,
-					text: 'Precipitation (%) / Wind Speed (mph)',
+					text: 'Precip (%) / Wind Spd (mph)',
 					font: {
-						size: 24,
+						size: remifyFont(1),
 					},
 				},
 				ticks: {
 					font: {
-						size: 18,
+						size: remifyFont(0.9),
 					},
 				},
 				grid: {
@@ -142,7 +146,7 @@ const WeatherGraph = ({ data }) => {
 				display: true,
 				labels: {
 					font: {
-						size: 20,
+						size: remifyFont(1.1),
 					},
 				},
 				onClick: (e, legendItem) => {
@@ -155,14 +159,14 @@ const WeatherGraph = ({ data }) => {
 			tooltip: {
 				backgroundColor: 'rgba(0, 0, 0, 1.0)',
 				titleFont: {
-					size: 16,
+					size: remifyFont(1.2),
 				},
 				bodyFont: {
-					size: 14,
+					size: remifyFont(1),
 				},
-				padding: 10,
-				boxPadding: 5,
-				cornerRadius: 4,
+				padding: remifyFont(0.8),
+				boxPadding: remifyFont(0.2),
+				cornerRadius: remifyFont(0.4),
 			}
 		},
 	};
@@ -170,7 +174,7 @@ const WeatherGraph = ({ data }) => {
 	return (
 		<div className={styles.weatherGraphContainer}>
 			<Box sx={{ width: '75%', textAlign: 'center'}}>
-				<Typography className={styles.weatherGraphTypography} gutterBottom>Day Range</Typography>
+				<h3 className={styles.weatherGraphTypography}>Day Range</h3>
 				<Slider
 					value={dayRange}
 					onChange={handleSliderChange}
@@ -180,7 +184,7 @@ const WeatherGraph = ({ data }) => {
 					slotProps={{
 						markLabel: { 
 							style: { 
-								fontSize: '1.5rem'
+								fontSize: '1.35rem'
 							}
 						}
 					}}
